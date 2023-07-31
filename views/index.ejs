@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<body>
+  <%- include('partials/homenavbar') %>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Seja bem vindo</h1>
+      <p class="lead">Esse é o blog do GuiaPress, onde falamos sobre tecnologia, mas especificadamente Programação.</p>
+    </div>
+  </div>
+  <div class="container">
+    <% articles.map(article => { %>
+     <div class="card mb-5">
+      <div class="card-header">
+        <h3> <%= article.title %> </h3>
+      </div>
+      <div class="card-body">
+        <a href="/<%= article.slug %>" class="btn btn-success">Ler artigo</a>
+      </div>
+     </div>
+    
+    <% }) %>
+  </div>
+</body>
+
+<%- include('partials/footer') %>

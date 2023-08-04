@@ -1,0 +1,33 @@
+<%- include('../../partials/head') %>
+
+<body>
+  <%- include('../../partials/navbar') %> 
+  <div class="container p-5">
+    <h1>Usuários</h1><br>
+    <a href="/admin/users/create" class="btn btn-success">Adicionar novo</a>
+    <hr>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.map(user => { %>
+          <tr>
+            <td> <%= user.id %> </td>
+            <td><%= user.email %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+
+<%- include('../../partials/footer') %>
+
+
+
+
